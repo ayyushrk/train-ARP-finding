@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Advanced Reservation Period Finder</title>
-		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-	<head>
-	
-	<body>
-
-		<div class="container">
-			<h1>Advanced Reservation Period Finder</h1>
-			<p class="subtitle">Find when your IRCTS ticket booking opens.</p>
-			<form id="form">
-				<label for="jdate">Journey Date:</label>
-				<input type="date" id="jdate" required>
-				<button type="submit">Find</button>
-			</form>
-		</div>
-		
-		<div id="result">
-		</div>
-
-		<footer>
-  			<p>Made by Ayush</p>
-		</footer>
-		
-		<script src="script.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Reservation Period Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Advanced Reservation Period Finder</h1>
+      <p class="subtitle">Find when your IRCTC ticket booking opens.</p>
+      <form id="reservationForm">
+        <label for="journeyDate">Journey Date:</label>
+        <input type="date" id="journeyDate" required>
+        <button type="submit">Find</button>
+      </form>
+      <div id="result"></div>
+      <footer>
+        <p>Made by Ayush</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
