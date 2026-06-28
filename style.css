@@ -142,3 +142,10 @@ hr {
   border-radius: 20px;
   margin-top: 6px;
 }
+
+footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 11px;
+  color: #aaa;
+}
