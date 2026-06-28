@@ -6,10 +6,10 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-   background: radial-gradient(farthest-side at center, #e0f2fe, #38bdf8, #0284c7) 
+  background: radial-gradient(farthest-side at center, #e0f2fe, #38bdf8, #0284c7) 
               center / 141% 141% no-repeat fixed;
   transform-style: flat; 
-  background-size: 141% 141%
+  background-size: 141% 141%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,12 +127,21 @@ hr {
   margin-top: 6px;
 }
 
+
 footer {
   position: fixed;
-  bottom: 12px;
-  right: 16px;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.3);
+  bottom: 10px;
+  right: 12px;
+  font-size: 9px;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.12); 
+  user-select: none;              
+  pointer-events: auto;             
+  transition: color 0.3s ease;
+}
+
+footer:hover {
+  color: rgba(255, 255, 255, 0.5); 
 }
 
 @media (max-width: 480px) {
