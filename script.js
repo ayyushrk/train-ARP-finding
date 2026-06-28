@@ -5,9 +5,9 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
   if (!val) return;
 
   const journey = new Date(val + 'T00:00:00');
+  
   const booking = new Date(journey);
-  booking.setMonth(booking.getMonth() - 2);
-  booking.setDate(booking.getDate() + 1);
+  booking.setDate(journey.getDate() - 60);
 
   const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const journeyStr = journey.toLocaleDateString('en-IN', opts);
@@ -15,12 +15,20 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const diff = Math.ceil((booking - today) / (1000 * 60 * 60 * 24));
+  
+  const bookingMidnight = new Date(booking);
+  bookingMidnight.setHours(0, 0, 0, 0);
+
+  const diff = Math.ceil((bookingMidnight - today) / (1000 * 60 * 60 * 24));
 
   let tagMsg = '';
-  if (diff > 0) tagMsg = `Booking opens in ${diff} day${diff === 1 ? '' : 's'}`;
-  else if (diff === 0) tagMsg = 'Booking opens today!';
-  else tagMsg = 'Booking window has passed';
+  if (diff > 0) {
+    tagMsg = `Booking opens in ${diff} day${diff === 1 ? '' : 's'}`;
+  } else if (diff === 0) {
+    tagMsg = 'Booking opens today!';
+  } else {
+    tagMsg = 'Booking window has passed';
+  }
 
   document.getElementById('result').innerHTML = `
     <div class="result-box">
