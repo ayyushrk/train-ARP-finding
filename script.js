@@ -32,15 +32,11 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 
   document.getElementById('result').innerHTML = `
     <div class="result-box">
-      <p class="small">Journey date</p>
-      <p class="bold">${journeyStr}</p>
-      <hr>
       <p class="small">Booking opens on</p>
       <p class="big">${bookingStr}</p>
       <p class="small">at 8:00 AM IST on IRCTC website</p>
       <span class="tag">${tagMsg}</span>
-      <hr>
-      <p class="note">Advance Reservation Period (ARP) = 60 days before journey</p>
+    
     </div>
   `;
 });
