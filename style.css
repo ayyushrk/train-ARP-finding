@@ -132,3 +132,22 @@ footer {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.3);
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 17px;
+  }
+
+  .big {
+    font-size: 18px;
+  }
+
+  .quote blockquote {
+    font-size: 15px;
+  }
+}
