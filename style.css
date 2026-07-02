@@ -132,10 +132,7 @@ footer {
   right: 16px;
   font-size: 9px;
   letter-spacing: 0.3px;
-  color: white; 
-  user-select: none;
-  pointer-events: auto;
-  transition: color 0.3s ease;
+  color: black;
   z-index: 10;
 }
 
