@@ -34,7 +34,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     <div class="result-box">
       <p class="small">Booking opens on</p>
       <p class="big">${bookingStr}</p>
-      <p class="small">at 8:00 AM IST on IRCTC website</p>
+      <p class="small">at 8:00 AM IST </p>
       <span class="tag">${tagMsg}</span>
     
     </div>
